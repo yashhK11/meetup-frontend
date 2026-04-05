@@ -3,7 +3,9 @@ import useFetch from "../useFetch";
 
 const EventList = ({ searchQuery, filterType }) => {
   const navigate = useNavigate();
-  const { data, loading } = useFetch("http://localhost:3000/events");
+  const { data, loading } = useFetch(
+    "https://meetup-backend-topaz.vercel.app/events",
+  );
 
   const filtered = data?.filter((event) => {
     const matchesType = filterType === "Both" || event.type === filterType;

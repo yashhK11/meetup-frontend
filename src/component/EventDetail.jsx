@@ -4,7 +4,9 @@ import useFetch from "../useFetch";
 const EventDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { data, loading } = useFetch(`http://localhost:3000/events/${id}`);
+  const { data, loading } = useFetch(
+    `https://meetup-backend-topaz.vercel.app/events/${id}`,
+  );
 
   if (loading) return <p className="p-3">Loading...</p>;
   if (!data) return <p className="p-3">Event not found.</p>;
