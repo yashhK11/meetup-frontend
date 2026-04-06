@@ -94,10 +94,6 @@ const EventDetail = () => {
               </div>
             </>
           )}
-
-          <div className="text-center mt-4">
-            <button className="btn btn-danger px-5">RSVP</button>
-          </div>
         </div>
       </div>
     </div>
